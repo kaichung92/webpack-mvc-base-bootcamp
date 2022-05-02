@@ -509,5 +509,11 @@ io.on("connection", (socket) => {
 
 // Set Express to listen on the given port
 const PORT = process.env.PORT || 3004;
+<<<<<<< HEAD
 // app.listen(PORT);
 httpServer.listen(PORT);
+=======
+app.listen(PORT, () => {
+  console.log(`App running at localhost:${PORT}`);
+});
+>>>>>>> f53b9b50d9a3c78b3a6b66b26536c5f75018930b

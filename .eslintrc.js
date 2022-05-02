@@ -39,6 +39,12 @@ module.exports = {
     'no-console': 'off',
     // Allow function param reassign for array or object elements or properties
     'no-param-reassign': ['error', { props: false }],
+<<<<<<< HEAD
     'prefer-const': 'off',
+=======
+    // Allows JSX code in .js files
+    // Helps prevent students from worrying about file extensions in React intro.
+    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+>>>>>>> f53b9b50d9a3c78b3a6b66b26536c5f75018930b
   },
 };
