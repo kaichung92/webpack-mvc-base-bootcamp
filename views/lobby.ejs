@@ -1,0 +1,45 @@
+<%- include('header') %>
+<html>
+  <body
+    class="container bg-secondary ms-2 justify-content-center align-items-center"
+    style="height: 900px"
+  >
+    <div class="row">
+      <div class="row">
+        <h2 class="mb-5 mt-5 ms-3 text-light">welcome back, <%=username%></h2>
+      </div>
+
+      <form action="/game " class="row pb-4">
+        <div class="col-8">
+          <input
+            class="ps-4 ms-4"
+            style="width: fit-content"
+            type="text"
+            name="RoomId"
+            id="RoomId"
+            placeholder="Enter room ID"
+            required
+          />
+        </div>
+
+        <div class="col-3">
+          <button class="btn btn-success" style="height: 30px" type="submit">
+            Join
+          </button>
+        </div>
+      </form>
+    </div>
+    <script>
+      function create() {
+        console.log(`create game`);
+        let join = document.getElementById(`join`);
+        join.innerText = "test";
+      }
+
+      function join() {
+        console.log(`join game`);
+      }
+    </script>
+  </body>
+</html>
+<%- include ('footer') %>

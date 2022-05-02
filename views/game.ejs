@@ -1,0 +1,236 @@
+<%- include('header') %>
+<html>
+  <body
+    class="container bg-secondary ms-2"
+    style="max-width: 850px; margin: 0 auto"
+  >
+    <div class="row" id="opponent-info">
+      <div class="row">
+        <p
+          class="text-center text-light mt-3"
+          id="opp-name"
+          style="font-weight: bold"
+        >
+          waiting for player
+        </p>
+        <p
+          class="text-center text-light"
+          style="font-weight: bold"
+          id="opp-credit"
+        >
+          100
+        </p>
+      </div>
+      <div class="row d-flex justify-content-center mb-2">
+        <div
+          class="col-3 border bg-dark me-1 opp-back"
+          style="width: 80px; height: 100px; border-radius: 10px"
+        >
+          <P
+            class="text-center mt-3 opp-card"
+            id="opp-card-1"
+            style="font-weight: bold"
+            >N</P
+          >
+          <p class="text-center opp-suit" style="font-weight: bold"></p>
+        </div>
+        <div
+          class="col-3 border bg-dark opp-back"
+          style="width: 80px; height: 100px; border-radius: 10px"
+        >
+          <P
+            class="text-center mt-3 opp-card"
+            id="opp-card-2"
+            style="font-weight: bold"
+          ></P>
+          <p class="text-center opp-suit" style="font-weight: bold"></p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="row border justify-content-center bg-success"
+      style="width: 100%; height: 370px; border-radius: 80px"
+    >
+      <div class="row justify-content-center mt-2">
+        <div
+          class="row border bg-warning ps-2"
+          style="
+            height: 25px;
+            width: 25px;
+            border-radius: 50px;
+            font-weight: bold;
+          "
+          id="opp-dealer-btn"
+        >
+          D
+        </div>
+      </div>
+      <div class="row text-center" style="height: fit-content">
+        <p class="text-light" style="font-weight: bold">pot</p>
+        <p class="text-light" id="pot-size" style="font-weight: bold">0</p>
+      </div>
+      <div
+        class="row d-flex justify-content-center mb-5"
+        style="height: fit-content; width: 100%"
+      >
+        <div
+          class="col border table-card bg-dark me-1 pot-back"
+          style="width: 80px; height: 90px; border-radius: 10px"
+        >
+          <P class="text-center mt-3 pot-card" style="font-weight: bold">N</P>
+          <p class="text-center pot-suit" style="font-weight: bold">S</p>
+        </div>
+        <div
+          class="col border table-card bg-dark me-1 pot-back"
+          style="width: 80px; height: 90px; border-radius: 10px"
+        >
+          <P class="text-center mt-3 pot-card" style="font-weight: bold">N</P>
+          <p class="text-center pot-suit" style="font-weight: bold">S</p>
+        </div>
+        <div
+          class="col border table-card bg-dark me-1 pot-back"
+          style="width: 80px; height: 90px; border-radius: 10px"
+        >
+          <P class="text-center mt-3 pot-card" style="font-weight: bold">N</P>
+          <p class="text-center pot-suit" style="font-weight: bold">S</p>
+        </div>
+        <div
+          class="col border table-card bg-dark me-1 pot-back"
+          style="width: 80px; height: 90px; border-radius: 10px"
+        >
+          <P class="text-center mt-3 pot-card" style="font-weight: bold">N</P>
+          <p class="text-center pot-suit" style="font-weight: bold">S</p>
+        </div>
+        <div
+          class="col border table-card bg-dark me-1 pot-back"
+          style="width: 80px; height: 90px; border-radius: 10px"
+        >
+          <P class="text-center mt-3 pot-card" style="font-weight: bold">N</P>
+          <p class="text-center pot-suit" style="font-weight: bold">S</p>
+        </div>
+      </div>
+      <div class="row text-center">
+        <p style="font-weight: bold" class="text-light" id="pot-msg">
+          waiting for player to join
+        </p>
+      </div>
+      <div class="row justify-content-center">
+        <div
+          class="row border bg-warning ps-2"
+          style="
+            height: 25px;
+            width: 25px;
+            border-radius: 50px;
+            font-weight: bold;
+          "
+          id="my-dealer-btn"
+        >
+          D
+        </div>
+      </div>
+    </div>
+    <div class="row mt-2" id="my-info">
+      <div class="row d-flex justify-content-center mb-3">
+        <div
+          class="col-3 border bg-dark me-1 player-back"
+          style="width: 80px; height: 100px; border-radius: 10px"
+        >
+          <P
+            class="text-center mt-3 player-card"
+            id="player-card-1"
+            style="font-weight: bold"
+            >N</P
+          >
+          <p class="text-center player-suit" style="font-weight: bold"></p>
+        </div>
+        <div
+          class="col-3 border bg-dark player-back"
+          style="width: 80px; height: 100px; border-radius: 10px"
+        >
+          <P
+            class="text-center mt-3 player-card"
+            id="player-card-2"
+            style="font-weight: bold"
+          ></P>
+          <p class="text-center player-suit" style="font-weight: bold"></p>
+        </div>
+      </div>
+      <div class="row">
+        <p
+          class="text-center my-card text-light"
+          style="font-weight: bold"
+          id="my-name"
+        >
+          <%=playerName%>
+        </p>
+        <p
+          class="text-center my-card text-light"
+          style="font-weight: bold"
+          id="my-money"
+        >
+          100
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <button
+          type="button"
+          class="btn btn-success"
+          id="check-fold-btn"
+          style="width: 100px; height: 60px; font-weight: bold"
+        >
+          Check
+        </button>
+      </div>
+      <div class="col">
+        <button
+          type="button"
+          class="btn btn-success"
+          id="call-btn"
+          style="width: 100px; height: 60px; font-weight: bold"
+        >
+          Call
+        </button>
+      </div>
+      <div class="col">
+        <button
+          type="button"
+          class="btn btn-success"
+          id="raise-btn"
+          style="width: 100px; height: 60px; font-weight: bold"
+        >
+          Raise
+        </button>
+      </div>
+    </div>
+    <div class="row slidecontainer mt-3">
+      <div
+        class="text-center col text-light ps-5 ms-5"
+        style="font-weight: bold"
+        id="demo"
+      >
+        20
+      </div>
+
+      <input
+        type="range"
+        min="0"
+        max="100"
+        value="50"
+        class="slider col-5 me-3"
+        id="myRange"
+      />
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.10.3/qs.js"
+      integrity="sha512-Qv1OSKmVsG3Y4WAKqvlcL/KllfceErp2+ZfNsQtox5nZtQKL86CVfbjmak7A+ka3jo7BwvFXa47vHEBs8QKq7Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/main.mjs"></script>
+  </body>
+</html>
+<%- include ('footer') %>

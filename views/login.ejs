@@ -1,0 +1,24 @@
+<%- include('header') %>
+<html>
+  <body
+    class="container bg-secondary ms-2 justify-content-center align-items-center"
+    style="height: 900px"
+  >
+    <% if (errormsg !="") { %>
+    <div class="col-12">
+      <div class="alert alert-danger" role="alert"><%= errormsg %></div>
+    </div>
+    <% } %>
+    <div class="row ms-5 ps-5">
+      <form action="/login" method="POST">
+        <h5 class="ml-2 row text-light">Username</h5>
+        <input class="row ml-2 mb-2" type="text" name="username" />
+        <h5 class="row ml-2 text-light">Password</h5>
+        <input class="row ml-2 mb-2" type="password" name="password" />
+        <a class="row ml-2 text-light" href="/register">register here</a>
+        <input class="row ml-2 btn btn-success" type="submit" value="Login" />
+      </form>
+    </div>
+  </body>
+</html>
+<%- include ('footer') %>
